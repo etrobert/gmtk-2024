@@ -24,7 +24,7 @@ public class MouseRestriction : MonoBehaviour
         Vector2 offset = mousePosition - circleCenter;
 
         // If the mouse is outside the circle, clamp it to the edge
-        if (offset.magnitude > radius)
+        if (offset.sqrMagnitude > radius * radius)
         {
             offset = offset.normalized * radius;
         }
