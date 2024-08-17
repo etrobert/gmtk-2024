@@ -6,23 +6,21 @@ using UnityEngine;
 public class PlayerScaling : MonoBehaviour
 {
   // Speed of scaling
-  public float scalingSpeed = 0.1f;
+  public float scalingSpeed = 0.07f;
 
-  public float maxScale = 2f * 2f * 2f;
-  public float minScale = 0.5f * 0.5f * 0.5f;
+  public float maxScale = 2f;
+  public float minScale = 0.5f;
 
-
-  private float LocalScaleVolume()
-  {
-    return transform.localScale.x * transform.localScale.y * transform.localScale.z;
-  }
+  private float scale = 1f;
 
   // Handle physics-based movement and rotation.
   private void FixedUpdate()
   {
-    if (Input.GetKey(KeyCode.E) && LocalScaleVolume() < maxScale)
-      transform.localScale += Vector3.one * scalingSpeed;
-    else if (Input.GetKey(KeyCode.Q) && LocalScaleVolume() > minScale)
-      transform.localScale -= Vector3.one * scalingSpeed;
+    if (Input.GetKey(KeyCode.E) && scale < maxScale)
+      scale += scalingSpeed;
+    else if (Input.GetKey(KeyCode.Q) && scale > minScale)
+      scale -= scalingSpeed;
+
+    transform.localScale = Vector3.one * scale;
   }
 }
