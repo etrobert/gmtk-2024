@@ -30,16 +30,15 @@ public class MouseRestriction : MonoBehaviour
         }
 
         Vector2 clampedMousePosition = circleCenter + offset;
-        // Set the mouse position (Note: This will visually move the cursor, but Unity itself doesn't allow direct mouse repositioning)
+        // Set the clampedMousePosition (Note: This will visually move the cursor, but Unity itself doesn't allow direct mouse repositioning)
         // Instead, you could use this position as input to your functions.
-
 
         // Move the marker to the clamped position
         Vector2 localPoint;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(circleRectTransform, clampedMousePosition, null, out localPoint);
         markerRectTransform.localPosition = localPoint;
 
-        Debug.Log("Clamped Mouse Position: " + clampedMousePosition);
+        Debug.Log("offset: " + offset);
 
         // Here, you would pass clampedMousePosition to your other functions
     }
