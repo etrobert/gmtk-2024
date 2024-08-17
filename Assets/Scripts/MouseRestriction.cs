@@ -6,6 +6,8 @@ public class MouseRestriction : MonoBehaviour
     public RectTransform markerRectTransform;
     private float radius;
 
+    public Vector2 poiteurPosition;
+
     void Start()
     {
         // Calculate the radius of the circle
@@ -21,15 +23,15 @@ public class MouseRestriction : MonoBehaviour
         Vector2 circleCenter = RectTransformUtility.WorldToScreenPoint(null, circleRectTransform.position);
 
         // Calculate the vector from the circle's center to the mouse position
-        Vector2 offset = mousePosition - circleCenter;
+        poiteurPosition = mousePosition - circleCenter;
 
         // If the mouse is outside the circle, clamp it to the edge
-        if (offset.sqrMagnitude > radius * radius)
+        if (poiteurPosition.sqrMagnitude > radius * radius)
         {
-            offset = offset.normalized * radius;
+            poiteurPosition = poiteurPosition.normalized * radius;
         }
 
-        Vector2 clampedMousePosition = circleCenter + offset;
+        Vector2 clampedMousePosition = circleCenter + poiteurPosition;
         // Set the clampedMousePosition (Note: This will visually move the cursor, but Unity itself doesn't allow direct mouse repositioning)
         // Instead, you could use this position as input to your functions.
 
@@ -38,9 +40,8 @@ public class MouseRestriction : MonoBehaviour
         RectTransformUtility.ScreenPointToLocalPointInRectangle(circleRectTransform, clampedMousePosition, null, out localPoint);
         markerRectTransform.localPosition = localPoint;
 
-        Debug.Log("offset: " + offset);
+        poiteurPosition = poiteurPosition / radius;
 
-        // Here, you would pass clampedMousePosition to your other functions
     }
 }
 

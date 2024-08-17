@@ -17,7 +17,7 @@ public class PlayerScaling : MonoBehaviour
 
   private float scale = 1f;
 
-  private Vector3 shape = frite;
+  public Vector3 shape = frite;
 
   // Handle physics-based movement and rotation.
   private void FixedUpdate()
