@@ -325,6 +325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   rotationSpeed: 50
+  maxLookOffset: 10
   bossTransform: {fileID: 1965366882}
   raycastDamage: {fileID: 1243411538}
 --- !u!114 &249545849
@@ -1014,7 +1015,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 100
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1040,13 +1041,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.17605399, y: 0, z: 0, w: 0.98438054}
-  m_LocalPosition: {x: 0, y: 3, z: -5}
+  m_LocalRotation: {x: 0.15557247, y: 0, z: 0, w: 0.9878245}
+  m_LocalPosition: {x: 0, y: 4.86, z: -7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 249545845}
-  m_LocalEulerAnglesHint: {x: 20.28, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 17.9, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
