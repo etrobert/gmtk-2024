@@ -6,7 +6,7 @@ public class RaycastDamage : MonoBehaviour
 
     // bullet to be instanciated
     public GameObject bulletPrefab;
-
+    public GameObject bossShell;
     // Layer mask to identify enemies
     public LayerMask enemyLayer;
 
@@ -38,7 +38,8 @@ public class RaycastDamage : MonoBehaviour
         {
             Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.red, 1.0f);
             // Launch a new ray
-            Instantiate(bulletPrefab, transform.position + transform.forward * transform.localScale.z, transform.rotation);
+            var bullet = Instantiate(bulletPrefab, transform.position + transform.forward * transform.localScale.z, transform.rotation);
+            bullet.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
         }
         else
             Debug.Log("No object hit by the ray.");
