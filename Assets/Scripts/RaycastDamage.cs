@@ -33,7 +33,7 @@ public class RaycastDamage : MonoBehaviour
     void Update()
     {
         // If the player presses the space key and the character is not loading, load the ray
-        if (Input.GetKey(KeyCode.Space) && startTime == null)
+        if ((Input.GetKey(KeyCode.Space) || (Input.GetMouseButton(0))) && startTime == null)
             startTime = Time.time;
     }
 

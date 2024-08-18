@@ -24,9 +24,9 @@ public class PlayerScaling : MonoBehaviour
   // Handle physics-based movement and rotation.
   private void FixedUpdate()
   {
-    if (Input.GetKey(KeyCode.E) && scale < maxScale)
+    if ((Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.V)) && scale < maxScale)
       scale += scalingSpeed;
-    else if (Input.GetKey(KeyCode.Q) && scale > minScale)
+    else if ((Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.LeftShift)) && scale > minScale)
       scale -= scalingSpeed;
 
     transform.localScale = shape * scale;
