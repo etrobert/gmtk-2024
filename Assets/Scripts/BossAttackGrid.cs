@@ -16,18 +16,16 @@ public class BossAttackGrid : MonoBehaviour
         createAttack();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    private int nbCircle = 200;
 
-    }
-    public int nbCircle = 20;
     void createAttack()
     {
         for (int i = 0; i < nbCircle; ++i)
         {
-            //Vector3(Random.Range(floor.transform.position.x, 2f);
-            Instantiate(cylinderAttack);
+            Vector2 randomPoint = Random.insideUnitCircle * floor.transform.localScale.x / 2f;
+            Vector3 newPosition = new(randomPoint[0], floor.transform.localScale.y + cylinderAttack.transform.localScale.y, randomPoint[1]);
+
+            Instantiate(cylinderAttack, newPosition, cylinderAttack.transform.rotation);
         }
     }
 }
