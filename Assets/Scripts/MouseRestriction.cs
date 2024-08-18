@@ -21,6 +21,8 @@ public class MouseRestriction : MonoBehaviour
 
     void Update()
     {
+        if (!Input.GetMouseButton(1)) return;
+
         // Get the mouse position in screen coordinates
         Vector2 mousePosition = Input.mousePosition;
 
