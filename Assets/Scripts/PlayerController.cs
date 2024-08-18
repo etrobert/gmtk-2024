@@ -8,15 +8,10 @@ public class PlayerController : MonoBehaviour
 
     public Transform bossTransform; // Boss Position
 
-    private Rigidbody rb; // Reference to player's Rigidbody.
-
     // Start is called before the first frame update
     private void Start()
     {
-        rb = GetComponent<Rigidbody>(); // Access player's Rigidbody.
-
-        Quaternion turnRotation = Quaternion.Euler(0f, 180 * Mathf.Atan((bossTransform.position.x - rb.position.x) / (bossTransform.position.z - rb.position.z)) / Mathf.PI, 0f);
-        rb.MoveRotation(turnRotation);
+        transform.LookAt(bossTransform);
     }
 
     // Handle physics-based movement and rotation.
@@ -26,8 +21,10 @@ public class PlayerController : MonoBehaviour
         float moveVertical = Input.GetAxis("Vertical");
         if (moveVertical != 0)
         {
-            Vector3 movement = transform.forward * moveVertical * speed * Time.fixedDeltaTime;
-            rb.MovePosition(rb.position + movement);
+            var forw = transform.forward;
+            forw.y = 0;
+            Vector3 movement = forw * moveVertical * speed * Time.fixedDeltaTime;
+            transform.position += movement;
         }
 
         // Rotate player based on horizontal input.
