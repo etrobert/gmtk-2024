@@ -8,6 +8,11 @@ public class MouseRestriction : MonoBehaviour
 
     public Vector2 poiteurPosition;
 
+    private Vector2 targetPosition;
+
+    // Speed of scaling
+    public float morphSpeed = 0.07f;
+
     void Start()
     {
         // Calculate the radius of the circle
@@ -23,25 +28,26 @@ public class MouseRestriction : MonoBehaviour
         Vector2 circleCenter = RectTransformUtility.WorldToScreenPoint(null, circleRectTransform.position);
 
         // Calculate the vector from the circle's center to the mouse position
-        poiteurPosition = mousePosition - circleCenter;
+        targetPosition = mousePosition - circleCenter;
 
         // If the mouse is outside the circle, clamp it to the edge
-        if (poiteurPosition.sqrMagnitude > radius * radius)
-        {
-            poiteurPosition = poiteurPosition.normalized * radius;
-        }
+        if (targetPosition.sqrMagnitude > radius * radius)
+            targetPosition = targetPosition.normalized * radius;
 
-        Vector2 clampedMousePosition = circleCenter + poiteurPosition;
+        Vector2 clampedMousePosition = circleCenter + targetPosition;
         // Set the clampedMousePosition (Note: This will visually move the cursor, but Unity itself doesn't allow direct mouse repositioning)
         // Instead, you could use this position as input to your functions.
 
         // Move the marker to the clamped position
-        Vector2 localPoint;
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(circleRectTransform, clampedMousePosition, null, out localPoint);
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(circleRectTransform, clampedMousePosition, null, out Vector2 localPoint);
         markerRectTransform.localPosition = localPoint;
 
-        poiteurPosition = poiteurPosition / radius;
+        targetPosition /= radius;
+    }
 
+    void FixedUpdate()
+    {
+        poiteurPosition = Vector2.Lerp(poiteurPosition, targetPosition, Time.fixedDeltaTime * morphSpeed);
     }
 }
 
