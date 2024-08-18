@@ -7,9 +7,24 @@ public class RaycastDamage : MonoBehaviour
     // Layer mask to identify enemies
     public LayerMask enemyLayer;
 
+    // loading time for raycast
+    public float fireLoadingTime = 0.25f;
+    // Loading iniatial time
+    private float? startTime = null;
+
+    void FixedUpdate()
+    {
+        // Debug.Log(startTime);
+        //If the shape has load, shoot
+        if (Time.time - startTime >= fireLoadingTime)
+            Shoot();
+    }
+
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space)) Shoot();
+        // If the player presses the space key, call the Shoot method
+        if (Input.GetKey(KeyCode.Space) && startTime == null)
+            startTime = Time.time;
     }
 
     void Shoot()
@@ -21,5 +36,7 @@ public class RaycastDamage : MonoBehaviour
             Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.red, 1.0f);
         else
             Debug.Log("No object hit by the ray.");
+
+        startTime = null;
     }
 }
