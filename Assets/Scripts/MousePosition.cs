@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MousePosition : MonoBehaviour
 {
-  static public Vector3 GetMousePos()
+  static public Vector2 GetMousePos()
   {
     // Get the mouse position relative to the screen's center
     return new Vector2(
