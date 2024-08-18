@@ -14,14 +14,9 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 GetLookTarget()
     {
-        if (Input.GetMouseButton(1))
-            return bossTransform.position;
+        if (Input.GetMouseButton(1)) return bossTransform.position;
 
-        // Get the mouse position relative to the screen's center
-        Vector2 pos = new(
-            Mathf.Clamp(Input.mousePosition.x / Screen.width, 0f, 1f) - 0.5f,
-            Mathf.Clamp(Input.mousePosition.y / Screen.height, 0f, 1f) - 0.5f
-        );
+        var pos = MousePosition.GetMousePos();
 
         return bossTransform.position + new Vector3(pos.x, pos.y) * maxLookOffset;
     }
