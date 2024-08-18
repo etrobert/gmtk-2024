@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        transform.LookAt(bossTransform);
+        
     }
 
     // Handle physics-based movement and rotation.
@@ -31,5 +31,7 @@ public class PlayerController : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         if (moveHorizontal != 0)
             transform.RotateAround(bossTransform.position, Vector3.up, -moveHorizontal * rotationSpeed * Time.fixedDeltaTime);
+            
+            transform.LookAt(bossTransform);
     }
 }
