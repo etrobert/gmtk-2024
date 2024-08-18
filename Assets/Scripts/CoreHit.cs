@@ -16,12 +16,17 @@ public class CoreHitt : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.CompareTag("Bullet"))
+        if (collision.gameObject.CompareTag("Bullet"))
         {
+
             Debug.Log("Core hit");
-            Destroy(other.gameObject);
+
+            Debug.Log("z: " + collision.transform.localScale.z);
+
+            Destroy(collision.gameObject);
         }
     }
 

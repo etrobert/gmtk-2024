@@ -17,16 +17,16 @@ public class ShellHitt : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.CompareTag("Bullet"))
+        if (collision.gameObject.CompareTag("Bullet"))
         {
 
             Debug.Log("Shell hit");
 
-            Debug.Log("z: " + other.transform.localScale.z);
+            Debug.Log("z: " + collision.transform.localScale.z);
 
-            Destroy(other.gameObject);
+            Destroy(collision.gameObject);
         }
     }
 
