@@ -23,18 +23,12 @@ public class MouseRestriction : MonoBehaviour
     {
         if (!Input.GetMouseButton(1)) return;
 
-        // Get the mouse position in screen coordinates
-        Vector2 mousePosition = Input.mousePosition;
+        var pos = MousePosition.GetMousePos();
 
         // Convert screen position to Canvas/RectTransform position
         Vector2 circleCenter = RectTransformUtility.WorldToScreenPoint(null, circleRectTransform.position);
 
-        // Calculate the vector from the circle's center to the mouse position
-        targetPosition = mousePosition - circleCenter;
-
-        // If the mouse is outside the circle, clamp it to the edge
-        if (targetPosition.sqrMagnitude > radius * radius)
-            targetPosition = targetPosition.normalized * radius;
+        targetPosition = pos * radius * 2;
 
         Vector2 clampedMousePosition = circleCenter + targetPosition;
         // Set the clampedMousePosition (Note: This will visually move the cursor, but Unity itself doesn't allow direct mouse repositioning)

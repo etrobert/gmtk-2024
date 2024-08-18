@@ -18,7 +18,15 @@ public class PlayerController : MonoBehaviour
 
         var pos = MousePosition.GetMousePos();
 
-        return bossTransform.position + new Vector3(pos.x, pos.y) * maxLookOffset;
+        var vectPlayerBoss = bossTransform.position - transform.position;
+        vectPlayerBoss.y = 0;
+
+        vectPlayerBoss.Normalize();
+        Vector2 planOrtho = new(vectPlayerBoss.z, -vectPlayerBoss.x);
+
+        var paneLooking = new Vector3(planOrtho.x * pos.x, pos.y, planOrtho.y * pos.x) * maxLookOffset;
+
+        return bossTransform.position + paneLooking;
     }
 
     private void HandleMovement()
