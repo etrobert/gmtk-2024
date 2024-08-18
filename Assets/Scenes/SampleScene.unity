@@ -698,8 +698,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f51e510d3f3840b7a6cfd7f1bd00cda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  rotationSpeed: 120
+  speed: 10
+  rotationSpeed: 50
   bossTransform: {fileID: 59792527}
 --- !u!54 &249545848
 Rigidbody:
@@ -1221,6 +1221,7 @@ MonoBehaviour:
   circleRectTransform: {fileID: 868455187}
   markerRectTransform: {fileID: 963851752}
   poiteurPosition: {x: 0, y: 0}
+  morphSpeed: 3
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1570,6 +1571,7 @@ MonoBehaviour:
   scalingSpeed: 0.07
   maxScale: 2
   minScale: 0.5
+  morphSpeed: 3.5
   shape: {x: 0.5, y: 0.5, z: 5}
 --- !u!1 &1610262049
 GameObject:
