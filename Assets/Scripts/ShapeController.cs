@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ShapeController : MonoBehaviour
@@ -11,15 +9,10 @@ public class ShapeController : MonoBehaviour
     static readonly Vector2 yVector = new(0, 1);
     static readonly Vector2 xVector = new(-pi6 / 2, 0.25f);
     static readonly Vector2 zVector = new(pi6 / 2, 0.25f);
+
     static float PlanProjection(Vector2 mat, Vector2 vec)
     {
-        return (mat.x * vec.x + mat.y * vec.y);
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
+        return mat.x * vec.x + mat.y * vec.y;
     }
 
     // Update is called once per frame
