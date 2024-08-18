@@ -326,6 +326,7 @@ MonoBehaviour:
   speed: 10
   rotationSpeed: 50
   bossTransform: {fileID: 1965366882}
+  raycastDamage: {fileID: 1243411538}
 --- !u!114 &249545849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1564,6 +1565,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 60
   bulletPrefab: {fileID: 7222523818485790227, guid: 3fae9bf9b03bd460fb26705b7398825a, type: 3}
+  bossShell: {fileID: 0}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 8
