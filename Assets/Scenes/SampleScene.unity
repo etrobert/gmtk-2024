@@ -6090,7 +6090,7 @@ MonoBehaviour:
   speed: 10
   rotationSpeed: 50
   maxLookOffset: 10
-  bossTransform: {fileID: 0}
+  bossTransform: {fileID: 1003235416}
   raycastDamage: {fileID: 1243411538}
 --- !u!114 &249545849
 MonoBehaviour:
@@ -7246,6 +7246,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   fireLoadingTime: 0.25
+  missileWidth: 0.05
 --- !u!1 &1327838406
 GameObject:
   m_ObjectHideFlags: 0
