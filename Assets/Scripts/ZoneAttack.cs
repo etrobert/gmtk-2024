@@ -7,7 +7,7 @@ public class ZoneAttack : MonoBehaviour
     public GameObject onColliderEffect;
 
     // Interval destroy time
-    public float timeToDestroy = 3f;
+    public float timeToDestroy = 20f;
     // Initial Spawn Time
     private float initialSpawnTime = 0f;
 
@@ -30,9 +30,17 @@ public class ZoneAttack : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("CylinderBossAttack"))
         {
-            Debug.Log("Attention ça brûle ");
+            Destroy(gameObject);
+        }
+        else if (other.CompareTag("Boss"))
+        {
+            Destroy(gameObject);
+        }
+        else if (other.CompareTag("Player"))
+        {
+            Debug.Log("Attention ça brûle");
             // Instantiate(onColliderEffect, transform.position, transform.rotation);
         }
     }
