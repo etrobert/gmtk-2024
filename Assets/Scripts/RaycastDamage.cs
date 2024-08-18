@@ -6,7 +6,7 @@ public class RaycastDamage : MonoBehaviour
 
     // bullet to be instanciated
     public GameObject bulletPrefab;
-    public GameObject bossShell;
+    public GameObject boss;
     // Layer mask to identify enemies
     public LayerMask enemyLayer;
 
@@ -38,8 +38,21 @@ public class RaycastDamage : MonoBehaviour
 
     void Shoot()
     {
-        var bullet = Instantiate(bulletPrefab, transform.position + transform.forward * transform.localScale.z, transform.rotation);
-        bullet.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        var width = 0.05f;
+
+        var vectPlayerBoss = transform.forward;
+        Vector3 planOrtho = new(vectPlayerBoss.z, 0, -vectPlayerBoss.x);
+
+        var basePos = transform.position + transform.forward * transform.localScale.z;
+        for (float x = 0f; x < transform.localScale.x; x += width)
+        {
+            // OK
+            var bullet = Instantiate(bulletPrefab, basePos - planOrtho * transform.localScale.x / 2
+            + new Vector3(x * planOrtho.x, 0, x * planOrtho.z)
+            , transform.rotation);
+            bullet.transform.localScale =
+                new Vector3(width, transform.localScale.y, transform.localScale.z);
+        }
 
         startTime = null;
     }
