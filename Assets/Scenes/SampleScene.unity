@@ -1563,7 +1563,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 60
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 7222523818485790227, guid: 3fae9bf9b03bd460fb26705b7398825a, type: 3}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 8
