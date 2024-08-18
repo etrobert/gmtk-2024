@@ -17,7 +17,11 @@ public class PlayerScaling : MonoBehaviour
 
   private float scale = 1f;
 
+  public float morphSpeed = 3.5f;
+
   public Vector3 shape = frite;
+
+  private Vector3 currentShape = frite;
 
   // Handle physics-based movement and rotation.
   private void FixedUpdate()
@@ -27,6 +31,8 @@ public class PlayerScaling : MonoBehaviour
     else if (Input.GetKey(KeyCode.Q) && scale > minScale)
       scale -= scalingSpeed;
 
-    transform.localScale = shape * scale;
+    currentShape = Vector3.Lerp(currentShape, shape, Time.fixedDeltaTime * morphSpeed);
+
+    transform.localScale = currentShape * scale;
   }
 }
