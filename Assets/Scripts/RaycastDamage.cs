@@ -14,7 +14,6 @@ public class RaycastDamage : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Debug.Log(startTime);
         //If the shape has load, shoot
         if (Time.time - startTime >= fireLoadingTime)
             Shoot();

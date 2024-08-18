@@ -1408,6 +1408,7 @@ GameObject:
   - component: {fileID: 1243411533}
   - component: {fileID: 1243411535}
   - component: {fileID: 1243411536}
+  - component: {fileID: 1243411538}
   m_Layer: 0
   m_Name: Shape
   m_TagString: Player
@@ -1549,6 +1550,23 @@ MonoBehaviour:
         m_AxisDivisions: 64
         m_HeightCuts: 0
         m_Smooth: 1
+--- !u!114 &1243411538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243411530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4c4ec3a39187413583d5712905c445f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 60
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  fireLoadingTime: 0.25
 --- !u!1 &1327838406
 GameObject:
   m_ObjectHideFlags: 0
@@ -1563,7 +1581,7 @@ GameObject:
   - component: {fileID: 1327838408}
   - component: {fileID: 1327838407}
   - component: {fileID: 1243411537}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BossHeart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
