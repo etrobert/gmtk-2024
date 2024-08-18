@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ShellHitt : MonoBehaviour
 {
+    public float damageMultiplier = 0.05f;
     // Start is called before the first frame update
     void Start()
     {
