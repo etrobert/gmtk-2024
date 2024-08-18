@@ -73,3 +73,5 @@ crashlytics-build.properties
 
 /output
 /output.zip
+
+/ProjectSettings/Packages/com.unity.probuilder/Settings.json
