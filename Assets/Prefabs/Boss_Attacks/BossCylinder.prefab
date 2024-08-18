@@ -121,3 +121,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onColliderEffect: {fileID: 0}
+  timeToDestroy: 3

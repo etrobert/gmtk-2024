@@ -10,20 +10,20 @@ public class BossAttackGrid : MonoBehaviour
 
     public GameObject floor;
 
+    // Interval spawn time
+    public float intervalSpawnTime = 0.25f;
+    // Last Spawn Time
+    private float lastSpawnTime = 0f;
+
     // Start is called before the first frame update
     void Start()
     {
         lastSpawnTime = Time.time;
     }
 
-    // Interval spawn time
-    public float intervalSpawnTime = 0.25f;
-    // Last Spawn Time
-    private float lastSpawnTime = 0f;
-
     void FixedUpdate()
     {
-        //If the shape has load, shoot
+        //If it's time to spawn new cylinder
         if (Time.time - lastSpawnTime >= intervalSpawnTime)
         {
             SpawnCylinder();
