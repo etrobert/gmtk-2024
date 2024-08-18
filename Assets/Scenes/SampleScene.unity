@@ -1201,7 +1201,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 100
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1227,13 +1227,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.15557247, y: 0, z: 0, w: 0.9878245}
-  m_LocalPosition: {x: 0, y: 4.86, z: -7}
+  m_LocalRotation: {x: 0.17605399, y: 0, z: 0, w: 0.98438054}
+  m_LocalPosition: {x: 0, y: 3, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 249545845}
-  m_LocalEulerAnglesHint: {x: 17.9, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 20.28, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1588,7 +1588,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 60
   bulletPrefab: {fileID: 7222523818485790227, guid: 3fae9bf9b03bd460fb26705b7398825a, type: 3}
-  bossShell: {fileID: 0}
+  boss: {fileID: 1003235414}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 8
