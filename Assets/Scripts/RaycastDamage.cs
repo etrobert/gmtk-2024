@@ -15,7 +15,7 @@ public class RaycastDamage : MonoBehaviour
     // Loading iniatial time
     private float? startTime = null;
 
-    public float missileWidth = 0.05f;
+    public float bulletWidth = 0.05f;
 
 
     public bool Firing
@@ -47,9 +47,9 @@ public class RaycastDamage : MonoBehaviour
         Vector3 planOrthoY = transform.forward + new Vector3(0, -Mathf.PI / 2, 0);
 
         var basePos = transform.position + transform.forward * transform.localScale.z;
-        for (float x = 0f; x < transform.localScale.x; x += missileWidth)
+        for (float x = 0f; x < transform.localScale.x; x += bulletWidth)
         {
-            for (float y = 0f; y < transform.localScale.y; y += missileWidth)
+            for (float y = 0f; y < transform.localScale.y; y += bulletWidth)
             {
                 var bullet = Instantiate(bulletPrefab,
                     basePos
@@ -62,7 +62,7 @@ public class RaycastDamage : MonoBehaviour
 
                     , transform.rotation);
                 bullet.transform.localScale =
-                    new Vector3(missileWidth, missileWidth, transform.localScale.z);
+                    new Vector3(bulletWidth, bulletWidth, transform.localScale.z);
             }
         }
 
