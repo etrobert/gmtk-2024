@@ -23,6 +23,9 @@ public class ShellHitt : MonoBehaviour
         {
 
             Debug.Log("Shell hit");
+
+            Debug.Log("z: " + other.transform.localScale.z);
+
             Destroy(other.gameObject);
         }
     }
