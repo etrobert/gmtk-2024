@@ -6886,7 +6886,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 249545845}
-  m_LocalEulerAnglesHint: {x: 17.9, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 20.28, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7241,7 +7241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 60
   bulletPrefab: {fileID: 7222523818485790227, guid: 3fae9bf9b03bd460fb26705b7398825a, type: 3}
-  bossShell: {fileID: 0}
+  boss: {fileID: 1003235414}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 8
