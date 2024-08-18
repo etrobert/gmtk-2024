@@ -4,19 +4,13 @@ using UnityEngine;
 
 public class ZoneAttack : MonoBehaviour
 {
-    public GameObject onColliderEffect;
-
     // Interval destroy time
     public float timeToDestroy = 20f;
     // Initial Spawn Time
     private float initialSpawnTime = 0f;
-    private float updateSizeTime = 0.2f;
     public float timeBeforeUpdateSize = 2f;
-
     private float height = 0.01f;
-
     private float maxHeight = 4f;
-
 
     // Start is called before the first frame update
     void Start()
@@ -53,11 +47,6 @@ public class ZoneAttack : MonoBehaviour
         else if (other.CompareTag("Boss"))
         {
             Destroy(gameObject);
-        }
-        else if (other.CompareTag("Player"))
-        {
-            Debug.Log("Attention ça brûle");
-            // Instantiate(onColliderEffect, transform.position, transform.rotation);
         }
     }
 }

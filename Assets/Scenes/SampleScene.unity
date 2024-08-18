@@ -6504,6 +6504,7 @@ GameObject:
   - component: {fileID: 791848822}
   - component: {fileID: 791848824}
   - component: {fileID: 791848823}
+  - component: {fileID: 791848825}
   m_Layer: 5
   m_Name: Fill
   m_TagString: Untagged
@@ -6568,6 +6569,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 791848821}
   m_CullTransparentMesh: 1
+--- !u!114 &791848825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791848821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17b36255b10f0bd40848a3118f01b28a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 0}
 --- !u!1 &868455186
 GameObject:
   m_ObjectHideFlags: 0
@@ -7086,6 +7100,8 @@ GameObject:
   - component: {fileID: 1243411535}
   - component: {fileID: 1243411536}
   - component: {fileID: 1243411538}
+  - component: {fileID: 1243411539}
+  - component: {fileID: 1243411540}
   m_Layer: 0
   m_Name: Shape
   m_TagString: Player
@@ -7247,6 +7263,50 @@ MonoBehaviour:
     m_Bits: 8
   fireLoadingTime: 0.25
   missileWidth: 0.05
+--- !u!54 &1243411539
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243411530}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1243411540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243411530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54552eade98997a44be94296be993087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 100
+  healthBar: {fileID: 0}
+  constantDamage: 5
+  insideDamage: 0.5
 --- !u!1 &1327838406
 GameObject:
   m_ObjectHideFlags: 0
@@ -12714,8 +12774,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1479106421}
   - component: {fileID: 1479106422}
+  - component: {fileID: 1479106423}
   m_Layer: 5
-  m_Name: HealtBar
+  m_Name: PlayerHealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12739,8 +12800,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 147.5}
-  m_SizeDelta: {x: 160, y: 20}
+  m_AnchoredPosition: {x: -277, y: 207.5}
+  m_SizeDelta: {x: 252, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1479106422
 MonoBehaviour:
@@ -12793,6 +12854,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1479106423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479106420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17b36255b10f0bd40848a3118f01b28a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 1479106422}
 --- !u!1 &1610262049
 GameObject:
   m_ObjectHideFlags: 0
