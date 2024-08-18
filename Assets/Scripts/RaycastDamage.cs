@@ -25,7 +25,6 @@ public class RaycastDamage : MonoBehaviour
 
     void FixedUpdate()
     {
-        //If the shape has load, shoot
         if (Time.time - startTime >= fireLoadingTime)
             Shoot();
     }
@@ -39,18 +38,8 @@ public class RaycastDamage : MonoBehaviour
 
     void Shoot()
     {
-        Ray ray = new(transform.position, transform.forward);
-
-        // Perform the raycast and check if it hits an object on the enemy layer
-        if (Physics.Raycast(ray, out RaycastHit hit, range, enemyLayer))
-        {
-            Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.red, 1.0f);
-            // Launch a new ray
-            var bullet = Instantiate(bulletPrefab, transform.position + transform.forward * transform.localScale.z, transform.rotation);
-            bullet.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
-        }
-        else
-            Debug.Log("No object hit by the ray.");
+        var bullet = Instantiate(bulletPrefab, transform.position + transform.forward * transform.localScale.z, transform.rotation);
+        bullet.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
 
         startTime = null;
     }
