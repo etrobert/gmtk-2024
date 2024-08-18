@@ -11,7 +11,7 @@ public class RaycastDamage : MonoBehaviour
     public LayerMask enemyLayer;
 
     // loading time for raycast
-    public float fireLoadingTime = 0.25f;
+    public float fireLoadingTime = 0f;
     // Loading iniatial time
     private float? startTime = null;
 

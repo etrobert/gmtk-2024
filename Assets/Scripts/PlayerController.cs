@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
     // Handle physics-based movement and rotation.
     private void FixedUpdate()
     {
-        if (!raycastDamage.Firing) HandleMovement();
+        HandleMovement();
 
         transform.LookAt(GetLookTarget());
     }

@@ -1706,7 +1706,7 @@ MonoBehaviour:
   scalingSpeed: 0.07
   maxScale: 2
   minScale: 0.5
-  morphSpeed: 3.5
+  morphSpeed: 4
   shape: {x: 0.5, y: 0.5, z: 5}
 --- !u!114 &1243411537
 MonoBehaviour:
