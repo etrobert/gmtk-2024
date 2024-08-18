@@ -15,6 +15,14 @@ public class RaycastDamage : MonoBehaviour
     // Loading iniatial time
     private float? startTime = null;
 
+    public bool Firing
+    {
+        get
+        {
+            return startTime is not null;
+        }
+    }
+
     void FixedUpdate()
     {
         //If the shape has load, shoot
@@ -46,5 +54,4 @@ public class RaycastDamage : MonoBehaviour
 
         startTime = null;
     }
-
 }

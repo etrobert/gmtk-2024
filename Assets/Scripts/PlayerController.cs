@@ -8,15 +8,13 @@ public class PlayerController : MonoBehaviour
 
     public Transform bossTransform; // Boss Position
 
-    // Start is called before the first frame update
-    private void Start()
-    {
-        
-    }
+    public RaycastDamage raycastDamage;
 
     // Handle physics-based movement and rotation.
     private void FixedUpdate()
     {
+        if (raycastDamage.Firing) return;
+
         // Move player based on vertical input.
         float moveVertical = Input.GetAxis("Vertical");
         if (moveVertical != 0)
@@ -31,7 +29,7 @@ public class PlayerController : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         if (moveHorizontal != 0)
             transform.RotateAround(bossTransform.position, Vector3.up, -moveHorizontal * rotationSpeed * Time.fixedDeltaTime);
-            
-            transform.LookAt(bossTransform);
+
+        transform.LookAt(bossTransform);
     }
 }
