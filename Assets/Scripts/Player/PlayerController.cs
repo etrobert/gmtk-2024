@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 500.0f; // Set player's movement speed.
     public float rotationSpeed = 120.0f; // Set player's rotation speed.
 
-    public float maxLookOffset = 10f;
+    private float maxLookOffset = 50f;
     public float baseHeight = 2f;
 
     public Transform bossTransform; // Boss Position
