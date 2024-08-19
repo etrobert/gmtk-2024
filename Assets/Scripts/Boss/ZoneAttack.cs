@@ -7,8 +7,8 @@ public class ZoneAttack : MonoBehaviour
 
     // Initial Spawn Time
     private float initialSpawnTime = 0f;
-    private float timeBeforeUpdateSize = 2f;
-    private float timeReduceSize = 18f;
+    private float timeBeforeUpdateSize = 1f;
+    private float timeReduceSize = 3f;
 
     private float height;
     private float minHeight = 0.01f;
@@ -61,7 +61,7 @@ public class ZoneAttack : MonoBehaviour
         {
             if (height <= maxHeight)
             {
-                height += 0.1f;
+                height += 0.3f;
                 transform.localScale = new Vector3(transform.localScale[0], height, transform.localScale[2]);
                 transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
             }

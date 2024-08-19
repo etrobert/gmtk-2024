@@ -13815,7 +13815,10 @@ MonoBehaviour:
   cylinderAttack: {fileID: 7222523818485790227, guid: 0a44c86cf5d9c584db2ac6f0c8774649, type: 3}
   parentCylinderAttack: {fileID: 2040506312}
   floor: {fileID: 100217967}
-  intervalSpawnTime: 0.25
+  playerShapeT: {fileID: 1243411531}
+  intervalSpawnTime: 0.03
+  lastSpawnTimeBelow: 1
+  intervalSpawnTimeBelow: 1.5
 --- !u!4 &1003235416
 Transform:
   m_ObjectHideFlags: 0
