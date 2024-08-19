@@ -3475,7 +3475,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   fireLoadingTime: 0.25
-  bulletWidth: 0.05
+  bulletWidth: 0.2
 --- !u!54 &1243411539
 Rigidbody:
   m_ObjectHideFlags: 0
