@@ -25,11 +25,16 @@ public class RaycastDamage : MonoBehaviour
             return startTime is not null;
         }
     }
+    public AudioClip firingSound;
 
     void FixedUpdate()
     {
         if (Time.time - startTime >= fireLoadingTime)
+        {
+            // play the firing sound
+            AudioSource.PlayClipAtPoint(firingSound, transform.position);
             Shoot();
+        }
     }
 
     void Update()
