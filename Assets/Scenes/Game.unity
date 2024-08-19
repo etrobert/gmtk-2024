@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 46706775}
   m_Layer: 0
   m_Name: Helice
-  m_TagString: Untagged
+  m_TagString: Shell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1045,7 +1045,7 @@ GameObject:
   - component: {fileID: 95066515}
   m_Layer: 0
   m_Name: Helice3
-  m_TagString: CylinderBossAttack
+  m_TagString: Shell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1412,7 +1412,7 @@ GameObject:
   - component: {fileID: 96383953}
   m_Layer: 0
   m_Name: Helice3
-  m_TagString: CylinderBossAttack
+  m_TagString: Shell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4171,7 +4171,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   rotationSpeed: 500
-  maxLookOffset: 10
   baseHeight: 2.06
   bossTransform: {fileID: 1003235416}
   raycastDamage: {fileID: 1243411538}
@@ -6362,7 +6361,7 @@ GameObject:
   - component: {fileID: 443681557}
   m_Layer: 0
   m_Name: Helice (1)
-  m_TagString: Untagged
+  m_TagString: Shell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9439,7 +9438,7 @@ GameObject:
   - component: {fileID: 776835740}
   m_Layer: 0
   m_Name: Helice
-  m_TagString: CylinderBossAttack
+  m_TagString: Shell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17553,7 +17552,7 @@ GameObject:
   - component: {fileID: 1308084756}
   m_Layer: 0
   m_Name: Helice4
-  m_TagString: CylinderBossAttack
+  m_TagString: Shell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18250,7 +18249,7 @@ GameObject:
   - component: {fileID: 1327784924}
   m_Layer: 0
   m_Name: Helice4
-  m_TagString: CylinderBossAttack
+  m_TagString: Shell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27133,7 +27132,7 @@ GameObject:
   - component: {fileID: 1529641218}
   m_Layer: 0
   m_Name: Helice2
-  m_TagString: CylinderBossAttack
+  m_TagString: Shell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29302,7 +29301,7 @@ GameObject:
   - component: {fileID: 1766160986}
   m_Layer: 0
   m_Name: Helice2
-  m_TagString: CylinderBossAttack
+  m_TagString: Shell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32048,7 +32047,7 @@ GameObject:
   - component: {fileID: 1909629305}
   m_Layer: 0
   m_Name: Helice
-  m_TagString: CylinderBossAttack
+  m_TagString: Shell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

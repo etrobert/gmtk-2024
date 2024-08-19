@@ -11,7 +11,7 @@ public class PlayerHealth : MonoBehaviour
     public float constantDamage = 5f;
     public float insideDamage = 0.5f;
     public float outsideDamage = 0.5f;
-    private bool isInsideDamage = false;
+    // private bool isInsideDamage = false;
 
     private void Start()
     {
@@ -40,25 +40,32 @@ public class PlayerHealth : MonoBehaviour
     {
         if (other.CompareTag("CylinderBossAttack"))
         {
-            isInsideDamage = true;
+            // isInsideDamage = true;
+            TakeDamage(constantDamage * 2);
+            Debug.Log("CylinderBossAttack");
+            Destroy(other.gameObject);
+        }
+        if (other.CompareTag("Shell"))
+        {
+            // isInsideDamage = true;
             TakeDamage(constantDamage);
         }
     }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("CylinderBossAttack"))
-        {
-            isInsideDamage = false;
-        }
-    }
+    // private void OnTriggerExit(Collider other)
+    // {
+    //     if (other.CompareTag("CylinderBossAttack"))
+    //     {
+    //         isInsideDamage = false;
+    //     }
+    // }
 
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.CompareTag("CylinderBossAttack") && isInsideDamage)
-        {
-            TakeDamage(insideDamage);
-        }
-    }
+    // private void OnTriggerStay(Collider other)
+    // {
+    //     if (other.CompareTag("CylinderBossAttack") && isInsideDamage)
+    //     {
+    //         TakeDamage(insideDamage);
+    //     }
+    // }
 
     private void FixedUpdate()
     {
