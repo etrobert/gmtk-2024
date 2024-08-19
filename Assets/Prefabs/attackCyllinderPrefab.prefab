@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6943850168287108591}
   - component: {fileID: -2890342457033036397}
   m_Layer: 0
-  m_Name: BossCylinder
+  m_Name: attackCyllinderPrefab
   m_TagString: CylinderBossAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
