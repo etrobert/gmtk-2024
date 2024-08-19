@@ -2118,8 +2118,10 @@ MonoBehaviour:
   health: 0
   maxHealth: 100
   healthBar: {fileID: 1479106423}
+  floor: {fileID: 100217967}
   constantDamage: 5
   insideDamage: 0.5
+  outsideDamage: 0.5
 --- !u!1 &1327838406
 GameObject:
   m_ObjectHideFlags: 0
