@@ -4100,8 +4100,10 @@ MonoBehaviour:
   speed: 10
   rotationSpeed: 500
   maxLookOffset: 10
+  baseHeight: 2.06
   bossTransform: {fileID: 1003235416}
   raycastDamage: {fileID: 1243411538}
+  playerShapeT: {fileID: 1243411531}
 --- !u!114 &249545849
 MonoBehaviour:
   m_ObjectHideFlags: 0

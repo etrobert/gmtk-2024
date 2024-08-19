@@ -7,10 +7,13 @@ public class PlayerController : MonoBehaviour
     public float rotationSpeed = 120.0f; // Set player's rotation speed.
 
     public float maxLookOffset = 10f;
+    public float baseHeight = 2f;
 
     public Transform bossTransform; // Boss Position
 
     public RaycastDamage raycastDamage;
+
+    public Transform playerShapeT;
 
     private Vector3 GetLookTarget()
     {
@@ -53,10 +56,16 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    private void HandleYPostoScaling()
+    {
+        transform.position = new Vector3(transform.position.x, baseHeight + playerShapeT.localScale.y / 2, transform.position.z);
+    }
+
     // Handle physics-based movement and rotation.
     private void FixedUpdate()
     {
         HandleMovement();
+        HandleYPostoScaling();
 
         transform.LookAt(GetLookTarget());
     }
