@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShellHitt : MonoBehaviour
 {
     [SerializeField] BossHealth bossHealth;
-    public float damageMultiplier = 0.05f;
+    public float damageMultiplier = 0.01f;
     // Start is called before the first frame update
     void Start()
     {
