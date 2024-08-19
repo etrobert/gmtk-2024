@@ -11,7 +11,7 @@ public class BossAttackGrid : MonoBehaviour
     public GameObject floor;
 
     // Interval spawn time
-    public float intervalSpawnTime = 0.25f;
+    public float intervalSpawnTime = 0.375f;
     // Last Spawn Time
     private float lastSpawnTime = 0f;
 
@@ -33,8 +33,12 @@ public class BossAttackGrid : MonoBehaviour
 
     void SpawnCylinder()
     {
-        Vector2 randomPoint = Random.insideUnitCircle * ((floor.transform.localScale.x / 2f) - (cylinderAttack.transform.localScale.x / 2f));
+        Vector2 randomPoint = Random.insideUnitCircle * ((floor.transform.localScale.x / 5f) - (cylinderAttack.transform.localScale.x / 2f));
         Vector3 newPosition = new(randomPoint[0], floor.transform.localScale.y, randomPoint[1]);
+        Instantiate(cylinderAttack, newPosition, cylinderAttack.transform.rotation, parentCylinderAttack.transform);
+
+        randomPoint = Random.insideUnitCircle * ((floor.transform.localScale.x / 2f) - (cylinderAttack.transform.localScale.x / 2f));
+        newPosition = new(randomPoint[0], floor.transform.localScale.y, randomPoint[1]);
         Instantiate(cylinderAttack, newPosition, cylinderAttack.transform.rotation, parentCylinderAttack.transform);
     }
 }
