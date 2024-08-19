@@ -24,10 +24,6 @@ public class CoreHitt : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
-
-            Debug.Log("Core hit");
-
-            Debug.Log("z: " + collision.transform.localScale.z * damageMultiplier);
             bossHealth.TakeDamage(collision.transform.localScale.z * damageMultiplier);
 
             Destroy(collision.gameObject);
