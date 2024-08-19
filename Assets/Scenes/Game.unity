@@ -16829,6 +16829,7 @@ MonoBehaviour:
     m_Bits: 8
   fireLoadingTime: 0.375
   bulletWidth: 0.2
+  firingSound: {fileID: 8300000, guid: e01ffceafbe3c42adb36a075d6b8d663, type: 3}
 --- !u!54 &1243411539
 Rigidbody:
   m_ObjectHideFlags: 0
