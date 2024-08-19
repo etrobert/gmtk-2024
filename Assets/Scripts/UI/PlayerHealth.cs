@@ -62,8 +62,6 @@ public class PlayerHealth : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log("PositionX : " + transform.position.x);
-        Debug.Log("PositionZ : " + transform.position.z);
 
         if ((Mathf.Abs(transform.position.x) > (floor.transform.localScale.x / 2f)) ||
             (Mathf.Abs(transform.position.z) > (floor.transform.localScale.z / 2f)))

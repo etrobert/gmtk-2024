@@ -3,7 +3,8 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public BossHealth bossHealth;
-    private float damageMultiplier = 0.0f;
+    public PlayerHealth playerHealth;
+    private float damageMultiplier = 1f;
     private float criticalMultiplier = 1f;
 
 
@@ -31,16 +32,23 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         bossHealth = GameObject.Find("Boss").GetComponent<BossHealth>();
+        playerHealth = GameObject.Find("Shape").GetComponent<PlayerHealth>();
+
         if (other.CompareTag("Heart"))
         {
-            bossHealth = GameObject.Find("Boss").GetComponent<BossHealth>();
             bossHealth.TakeDamage(transform.localScale.z * criticalMultiplier);
             Destroy(gameObject);
         }
+
         else if (other.CompareTag("Shell"))
         {
-            bossHealth = GameObject.Find("Boss").GetComponent<BossHealth>();
-            bossHealth.TakeDamage(transform.localScale.z * damageMultiplier);
+            Destroy(gameObject);
+        }
+
+        else if (other.CompareTag("PlayerShell"))
+        {
+
+            playerHealth.TakeDamage(transform.localScale.z * damageMultiplier);
             Destroy(gameObject);
         }
 

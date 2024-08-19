@@ -10,6 +10,7 @@ TagManager:
   - Heart
   - Shell
   - PlayButton
+  - PlayerShell
   layers:
   - Default
   - TransparentFX
