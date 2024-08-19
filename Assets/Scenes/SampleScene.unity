@@ -2074,7 +2074,7 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 8
-  fireLoadingTime: 0.25
+  fireLoadingTime: 0.375
   bulletWidth: 0.2
 --- !u!54 &1243411539
 Rigidbody:
