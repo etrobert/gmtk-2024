@@ -17,6 +17,7 @@ public class BossHealth : MonoBehaviour
     private void Die()
     {
         Debug.Log("YOU WIN!");
+        MainMenu.QuitGame();
         Destroy(gameObject);
     }
 

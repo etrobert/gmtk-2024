@@ -22,6 +22,7 @@ public class PlayerHealth : MonoBehaviour
     private void Die()
     {
         Debug.Log("YOU DIE!");
+        MainMenu.QuitGame();
         //Destroy(gameObject);
     }
 

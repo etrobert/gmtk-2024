@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - Heart
   - Shell
+  - PlayButton
   layers:
   - Default
   - TransparentFX

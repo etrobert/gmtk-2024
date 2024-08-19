@@ -48,5 +48,11 @@ public class Bullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+
+        else if (other.CompareTag("PlayButton"))
+        {
+            MainMenu.PlayGame();
+        }
     }
 }
