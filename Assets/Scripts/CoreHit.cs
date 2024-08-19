@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CoreHitt : MonoBehaviour
 {
+    [SerializeField] BossHealth bossHealth;
+    public float damageMultiplier = 1f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +27,8 @@ public class CoreHitt : MonoBehaviour
 
             Debug.Log("Core hit");
 
-            Debug.Log("z: " + collision.transform.localScale.z);
+            Debug.Log("z: " + collision.transform.localScale.z * damageMultiplier);
+            bossHealth.TakeDamage(collision.transform.localScale.z * damageMultiplier);
 
             Destroy(collision.gameObject);
         }

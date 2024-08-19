@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ShellHitt : MonoBehaviour
 {
+    [SerializeField] BossHealth bossHealth;
     public float damageMultiplier = 0.05f;
     // Start is called before the first frame update
     void Start()
@@ -22,10 +23,11 @@ public class ShellHitt : MonoBehaviour
         if (collision.gameObject.CompareTag("Bullet"))
         {
 
-            Debug.Log("Shell hit");
+            // Debug.Log("Shell hit");
 
-            Debug.Log("z: " + collision.transform.localScale.z);
+            // Debug.Log("z: " + collision.transform.localScale.z * damageMultiplier);
 
+            bossHealth.TakeDamage(collision.transform.localScale.z * damageMultiplier);
             Destroy(collision.gameObject);
         }
     }
