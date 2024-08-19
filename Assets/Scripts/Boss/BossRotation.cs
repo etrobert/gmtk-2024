@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 public class BossRotation : MonoBehaviour
 
 {
-    public int rotationDirection;
+    public float rotationDirection;
     // Start is called before the first frame update
     void Start()
     {
