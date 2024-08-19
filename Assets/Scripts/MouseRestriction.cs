@@ -21,7 +21,7 @@ public class MouseRestriction : MonoBehaviour
 
     void Update()
     {
-        if (!Input.GetMouseButton(1)) return;
+        if (Input.GetMouseButton(1)) return;
 
         var pos = MousePosition.GetMousePos();
 

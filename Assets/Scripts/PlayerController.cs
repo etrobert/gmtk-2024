@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 GetLookTarget()
     {
-        if (Input.GetMouseButton(1)) return bossTransform.position;
+        if (!Input.GetMouseButton(1)) return bossTransform.position;
 
         var pos = MousePosition.GetMousePos();
 
