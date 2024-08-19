@@ -363,7 +363,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1452573305}
 --- !u!33 &184234376
@@ -1838,6 +1838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87c589d94976b49f5a64e2da715f2161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossHealth: {fileID: 1003235417}
   damageMultiplier: 0.05
 --- !u!1 &222629890
 GameObject:
@@ -3560,7 +3561,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2146169668}
 --- !u!33 &1327838408
@@ -8972,7 +8973,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 1, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1003235416}
@@ -8989,6 +8990,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e7c226a98a594c63ba71cd3804998bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossHealth: {fileID: 1003235417}
+  damageMultiplier: 1
 --- !u!43 &1452573305
 Mesh:
   m_ObjectHideFlags: 0
