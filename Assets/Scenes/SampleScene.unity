@@ -2342,7 +2342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  rotationSpeed: 50
+  rotationSpeed: 500
   maxLookOffset: 10
   bossTransform: {fileID: 1003235416}
   raycastDamage: {fileID: 1243411538}

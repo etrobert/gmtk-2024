@@ -44,7 +44,12 @@ public class PlayerController : MonoBehaviour
         // Rotate player based on horizontal input.
         float moveHorizontal = Input.GetAxis("Horizontal");
         if (moveHorizontal != 0)
-            transform.RotateAround(bossTransform.position, Vector3.up, -moveHorizontal * rotationSpeed * Time.fixedDeltaTime);
+        {
+            var vectPlayerBoss = bossTransform.position - transform.position;
+            vectPlayerBoss.y = 0;
+            var distance = vectPlayerBoss.magnitude;
+            transform.RotateAround(bossTransform.position, Vector3.up, -moveHorizontal * rotationSpeed * Time.fixedDeltaTime / distance);
+        }
 
     }
 
