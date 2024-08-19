@@ -3,7 +3,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public BossHealth bossHealth;
-    private float damageMultiplier = 0.01f;
+    private float damageMultiplier = 0.0f;
     private float criticalMultiplier = 1f;
 
 

@@ -1722,7 +1722,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1602735462}
+  m_Mesh: {fileID: 174185442}
 --- !u!33 &156300927
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -2372,7 +2372,7 @@ GameObject:
   - component: {fileID: 265324459}
   m_Layer: 0
   m_Name: BossShell
-  m_TagString: Untagged
+  m_TagString: Shell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2408,7 +2408,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d03fd58788b14510888cd88390aa95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationDirection: 2
 --- !u!1 &274376264
 GameObject:
   m_ObjectHideFlags: 0
@@ -3462,7 +3461,7 @@ GameObject:
   - component: {fileID: 393145866}
   m_Layer: 0
   m_Name: BossShell (5)
-  m_TagString: Untagged
+  m_TagString: Shell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3498,7 +3497,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d03fd58788b14510888cd88390aa95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationDirection: 2
 --- !u!43 &403682673
 Mesh:
   m_ObjectHideFlags: 0
@@ -3804,7 +3802,7 @@ GameObject:
   - component: {fileID: 523387196}
   m_Layer: 0
   m_Name: BossShell (2)
-  m_TagString: Untagged
+  m_TagString: Shell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3840,7 +3838,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d03fd58788b14510888cd88390aa95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationDirection: -2
 --- !u!1 &524428814
 GameObject:
   m_ObjectHideFlags: 0
@@ -5537,7 +5534,7 @@ GameObject:
   - component: {fileID: 785380600}
   m_Layer: 0
   m_Name: BossShell (7)
-  m_TagString: Untagged
+  m_TagString: Shell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5573,7 +5570,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d03fd58788b14510888cd88390aa95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationDirection: 2
 --- !u!1 &791591805
 GameObject:
   m_ObjectHideFlags: 0
@@ -6992,7 +6988,7 @@ GameObject:
   - component: {fileID: 926492529}
   m_Layer: 0
   m_Name: BossShell (1)
-  m_TagString: Untagged
+  m_TagString: Shell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7028,7 +7024,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d03fd58788b14510888cd88390aa95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationDirection: 1
 --- !u!43 &936100157
 Mesh:
   m_ObjectHideFlags: 0
@@ -8422,7 +8417,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d03fd58788b14510888cd88390aa95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationDirection: 0
 --- !u!1 &1014147950
 GameObject:
   m_ObjectHideFlags: 0
@@ -9252,7 +9246,7 @@ GameObject:
   - component: {fileID: 1193822286}
   m_Layer: 0
   m_Name: BossShell (6)
-  m_TagString: Untagged
+  m_TagString: Shell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9288,7 +9282,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d03fd58788b14510888cd88390aa95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationDirection: -2
 --- !u!1 &1200695192
 GameObject:
   m_ObjectHideFlags: 0
@@ -10570,6 +10563,7 @@ MonoBehaviour:
   floor: {fileID: 100217967}
   constantDamage: 5
   insideDamage: 0.5
+  outsideDamage: 0.5
 --- !u!43 &1272588929
 Mesh:
   m_ObjectHideFlags: 0
@@ -10917,7 +10911,7 @@ GameObject:
   - component: {fileID: 1327838413}
   m_Layer: 3
   m_Name: BossHeart
-  m_TagString: Untagged
+  m_TagString: Heart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17112,7 +17106,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 308267368}
+  m_Mesh: {fileID: 1348609311}
 --- !u!33 &1415072448
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -19310,7 +19304,7 @@ GameObject:
   - component: {fileID: 1626616065}
   m_Layer: 0
   m_Name: BossShell (3)
-  m_TagString: Untagged
+  m_TagString: Shell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19346,7 +19340,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d03fd58788b14510888cd88390aa95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationDirection: -1
 --- !u!43 &1634223563
 Mesh:
   m_ObjectHideFlags: 0
@@ -21265,7 +21258,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1572593743}
+  m_Mesh: {fileID: 1634223563}
 --- !u!33 &1849929774
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -21573,7 +21566,7 @@ GameObject:
   - component: {fileID: 1869805518}
   m_Layer: 0
   m_Name: BossShell (4)
-  m_TagString: Untagged
+  m_TagString: Shell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21609,7 +21602,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d03fd58788b14510888cd88390aa95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationDirection: -1
 --- !u!1 &1874678058
 GameObject:
   m_ObjectHideFlags: 0
@@ -24219,7 +24211,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1829137674}
+  m_Mesh: {fileID: 1513469073}
 --- !u!33 &2035343472
 MeshFilter:
   m_ObjectHideFlags: 10
