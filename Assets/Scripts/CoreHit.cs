@@ -20,14 +20,14 @@ public class CoreHitt : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Bullet"))
-        {
-            bossHealth.TakeDamage(collision.transform.localScale.z * damageMultiplier);
+    // private void OnCollisionEnter(Collision collision)
+    // {
+    //     if (collision.gameObject.CompareTag("Bullet"))
+    //     {
+    //         bossHealth.TakeDamage(collision.transform.localScale.z * damageMultiplier);
 
-            Destroy(collision.gameObject);
-        }
-    }
+    //         Destroy(collision.gameObject);
+    //     }
+    // }
 
 }

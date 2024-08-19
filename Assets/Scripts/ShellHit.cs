@@ -18,13 +18,13 @@ public class ShellHitt : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Bullet"))
-        {
-            bossHealth.TakeDamage(collision.transform.localScale.z * damageMultiplier);
-            Destroy(collision.gameObject);
-        }
-    }
+    // private void OnCollisionEnter(Collision collision)
+    // {
+    //     if (collision.gameObject.CompareTag("Bullet"))
+    //     {
+    //         bossHealth.TakeDamage(collision.transform.localScale.z * damageMultiplier);
+    //         Destroy(collision.gameObject);
+    //     }
+    // }
 
 }
