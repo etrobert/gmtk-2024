@@ -4,37 +4,71 @@ using UnityEngine;
 
 public class ZoneAttack : MonoBehaviour
 {
-    // Interval destroy time
-    public float timeToDestroy = 20f;
+
     // Initial Spawn Time
     private float initialSpawnTime = 0f;
-    public float timeBeforeUpdateSize = 2f;
-    private float height = 0.01f;
+    private float timeBeforeUpdateSize = 2f;
+    private float timeReduceSize = 18f;
+
+    private float height;
+    private float minHeight = 0.01f;
+
     private float maxHeight = 4f;
+
+    public bool earlyDestroy = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        height = minHeight;
         initialSpawnTime = Time.time;
         transform.localScale = new Vector3(transform.localScale[0], height, transform.localScale[2]);
     }
 
+    private void SetEarlyDestroy()
+    {
+        earlyDestroy = true;
+    }
+    private void CyinderGoDownAndDestroy()
+    {
+        if (height >= minHeight)
+        {
+            height -= 0.1f;
+            transform.localScale = new Vector3(transform.localScale[0], height, transform.localScale[2]);
+            transform.position = new Vector3(transform.position.x, transform.position.y - 0.1f, transform.position.z);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
         transform.Rotate(0, 0.2f, 0);
 
-        if ((Time.time - initialSpawnTime >= timeBeforeUpdateSize) && (height <= maxHeight))
-        {
-            height += 0.1f;
-            transform.localScale = new Vector3(transform.localScale[0], height, transform.localScale[2]);
-            transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
-        }
+        var elapsedTime = Time.time - initialSpawnTime;
 
-        //If it's time to destroy the cylinder
-        if (Time.time - initialSpawnTime >= timeToDestroy)
+        if (earlyDestroy)
         {
-            Destroy(gameObject);
+            CyinderGoDownAndDestroy();
+        }
+        else if (elapsedTime <= timeBeforeUpdateSize)
+        {
+            // nothing to do, just wait
+        }
+        else if (elapsedTime <= timeReduceSize)
+        {
+            if (height <= maxHeight)
+            {
+                height += 0.1f;
+                transform.localScale = new Vector3(transform.localScale[0], height, transform.localScale[2]);
+                transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
+            }
+        }
+        else
+        {
+            CyinderGoDownAndDestroy();
         }
     }
 
@@ -42,7 +76,7 @@ public class ZoneAttack : MonoBehaviour
     {
         if (other.CompareTag("CylinderBossAttack"))
         {
-            Destroy(gameObject);
+            other.GetComponent<ZoneAttack>().SetEarlyDestroy();
         }
         else if (other.CompareTag("Boss"))
         {
