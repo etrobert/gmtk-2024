@@ -10,7 +10,6 @@ public class BackgroundusicController : MonoBehaviour
     void Start()
     {
         PlayMusic("game1");
-
     }
 
     public void PlayMusic(string name)
