@@ -11,6 +11,10 @@ public class BossLevel : MonoBehaviour
     public void IncreaseLevel()
     {
         level++;
+        if (level > 6)
+        {
+            MainMenu.QuitGame();
+        }
     }
     public int GetLevel()
     {

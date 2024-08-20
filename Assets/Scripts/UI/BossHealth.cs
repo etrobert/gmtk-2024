@@ -27,7 +27,8 @@ public class BossHealth : MonoBehaviour
         healthBar.UpdateHealthBar(health, maxHealth);
         if (health <= 0)
         {
-            Die();
+            GetComponent<BossLevel>().IncreaseLevel();
+            Start();
         }
     }
 }
