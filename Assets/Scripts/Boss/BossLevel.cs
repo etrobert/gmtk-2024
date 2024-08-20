@@ -12,4 +12,8 @@ public class BossLevel : MonoBehaviour
     {
         level++;
     }
+    public int GetLevel()
+    {
+        return level;
+    }
 }
