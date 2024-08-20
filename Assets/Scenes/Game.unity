@@ -15438,7 +15438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 1
   text: {fileID: 647553408}
-  Bgmusic: {fileID: 0}
+  Bgmusic: {fileID: 492877324}
 --- !u!1 &1014147950
 GameObject:
   m_ObjectHideFlags: 0
