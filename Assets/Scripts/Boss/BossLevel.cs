@@ -22,9 +22,9 @@ public class BossLevel : MonoBehaviour
     {
         level++;
         text.text = "lvl: " + level;
-        if (level == 6)
+        if (level == 4)
         {
-            GetComponent<BackgroundusicController>().PlayMusic("deuxiememusic");
+            Bgmusic.GetComponent<BackgroundusicController>().PlayMusic("deuxiememusic");
         }
         if (level > 6)
         {

@@ -16,8 +16,9 @@ public class BackgroundusicController : MonoBehaviour
     {
         var sources = GetComponents<AudioSource>();
         // var result = sources.FirstOrDefault(item => item.clip.name == "game1");
-        var result = sources.FirstOrDefault(item => item.clip.name == name);
-        Debug.Log(result);
+        var result = sources.FirstOrDefault(item => item.clip.name == "game1");
+        result.Stop();
+        result = sources.FirstOrDefault(item => item.clip.name == name);
         result.Play();
 
 
