@@ -27,10 +27,15 @@ public class BossAttackGrid : MonoBehaviour
         lastSpawnTime = Time.time;
     }
 
+    public GameObject boss;
+
+
     void FixedUpdate()
     {
+        int BossLevel = GetComponent<BossLevel>().GetLevel();
+
         //If it's time to spawn new cylinder
-        if (Time.time - lastSpawnTime >= intervalSpawnTime)
+        if (Time.time - lastSpawnTime >= intervalSpawnTime && BossLevel >= 4)
         {
             Vector2 pos = Random.insideUnitCircle * ((floor.transform.localScale.x / 2f) - (cylinderAttack.transform.localScale.x / 2f));
             SpawnCylinder(pos);
@@ -40,7 +45,7 @@ public class BossAttackGrid : MonoBehaviour
             lastSpawnTime = Time.time;
         }
         //If it's time to spawn new cylinder
-        if (Time.time - lastSpawnTimeBelow >= intervalSpawnTimeBelow)
+        if (Time.time - lastSpawnTimeBelow >= intervalSpawnTimeBelow && BossLevel >= 2)
         {
             SpawnCylinder(new Vector2(playerShapeT.position.x, playerShapeT.position.z));
             lastSpawnTimeBelow = Time.time;
