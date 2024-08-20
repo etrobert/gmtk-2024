@@ -8,7 +8,7 @@ public class BossLevel : MonoBehaviour
     public TMP_Text text;
 
     //open music file
-    public GameObject backgroundMusic;
+    public GameObject Bgmusic;
 
 
     // Start is called before the first frame update
@@ -22,6 +22,10 @@ public class BossLevel : MonoBehaviour
     {
         level++;
         text.text = "lvl: " + level;
+        if (level == 6)
+        {
+            GetComponent<BackgroundusicController>().PlayMusic("deuxiememusic");
+        }
         if (level > 6)
         {
             MainMenu.QuitGame();

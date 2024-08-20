@@ -1,18 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
+
 
 public class BackgroundusicController : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-        
+        PlayMusic("game1");
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlayMusic(string name)
     {
-        
+        var sources = GetComponents<AudioSource>();
+        // var result = sources.FirstOrDefault(item => item.clip.name == "game1");
+        var result = sources.FirstOrDefault(item => item.clip.name == name);
+        Debug.Log(result);
+        result.Play();
+
+
     }
+
 }
