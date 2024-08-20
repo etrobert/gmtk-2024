@@ -15425,6 +15425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 1
   text: {fileID: 647553408}
+  backgroundMusic: {fileID: 492877324}
 --- !u!1 &1014147950
 GameObject:
   m_ObjectHideFlags: 0
