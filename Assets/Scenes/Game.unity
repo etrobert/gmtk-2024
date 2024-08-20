@@ -5407,7 +5407,6 @@ Transform:
   - {fileID: 737500301}
   - {fileID: 1509042869}
   - {fileID: 1147792498}
-  - {fileID: 956084232}
   - {fileID: 184001843}
   - {fileID: 1073236306}
   - {fileID: 458927147}
@@ -17045,8 +17044,8 @@ GameObject:
   - component: {fileID: 956084234}
   - component: {fileID: 956084233}
   m_Layer: 0
-  m_Name: Stairs (6)
-  m_TagString: Shell
+  m_Name: playerinshell9
+  m_TagString: PlayerShell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17060,11 +17059,11 @@ Transform:
   m_GameObject: {fileID: 956084231}
   serializedVersion: 2
   m_LocalRotation: {x: 0.183847, y: 0.183847, z: 0.6827886, w: 0.6827886}
-  m_LocalPosition: {x: -0.74993837, y: -21.259256, z: -2.056815}
-  m_LocalScale: {x: 2.711111, y: 8.2676525, z: 0.60122174}
+  m_LocalPosition: {x: -6.832791, y: -11.973671, z: -8.957608}
+  m_LocalScale: {x: 1.464, y: 9.560001, z: 0.88000005}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 265324458}
+  m_Father: {fileID: 1640082835}
   m_LocalEulerAnglesHint: {x: 0, y: 62.1, z: 90}
 --- !u!64 &956084233
 MeshCollider:
@@ -17116,7 +17115,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 44d6fc863c516da4d86ce317fd2d00b6, type: 2}
+  - {fileID: 2100000, guid: 5343926fc8e9a477d841843b3dd3a2a1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35936,6 +35935,7 @@ Transform:
   - {fileID: 1835472328}
   - {fileID: 1961111429}
   - {fileID: 1353905728}
+  - {fileID: 956084232}
   m_Father: {fileID: 1003235416}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1663440738
